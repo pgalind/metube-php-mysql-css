@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.options-bar {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    border-bottom: solid 2px;
+}
+.dropdown-options {
+    width: 4em;
+    min-width: 4em;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.drop-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 11em;
+    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.drop-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+}
+.drop-menu a:hover {
+    background-color: #ddd;
+}
+.drop-btn {
+    border: none;
+    padding: 12px;
+    background-color: transparent;
+    text-align: center;
+}
+/* change size of dropdown button when hovering on it*/
+.dropdown-options:hover .drop-btn {
+    transform: scale(1.05);
+    transition: all 0.05s ease-in-out;
+    background-color: #ddd;
+}
+/* display drop-down options when hovering over the icon */
+.dropdown-options:hover .drop-menu {
+    display: block;
+}
+.logo-container {
+    width: 7em;
+    min-width: 7em;
+    text-align: center;
+
+}
+.searchbar {
+    width: 50%;
+    min-width: 1em;
+    line-height: 54px;
+    text-align: left;
+    display: block;
+}
+.searchbar input {
+    font-size: 16px;
+    padding: 8px 12px;
+    width: 80%;
+    position: relative;
+    border-radius: 2px 0px 0px 2px;
+    border: none;
+    outline: none;
+}
+.searchbar input:focus {
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.07s ease-in-out;
+}
+.searchbar button:hover {
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.07s ease-in-out;
+  cursor: pointer;
+}
+.searchbar button {
+  position: absolute;
+  padding: 7px 12px;
+  top: 11px;
+  font-size: 16px;
+  border-radius: 0px 2px 2px 0px;
+  border: solid 1px;
+  border-color: transparent;
+}
+.dropdown-settings {
+    width: fit-content;
+    min-width: 9em;
+    max-width: 16em;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.dropdown-settings a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+.dropdown-settings:hover .drop-menu {
+    display: block;
+}
+/* change size of dropdown button when hovering on it*/
+.dropdown-settings:hover .drop-btn {
+    transform: scale(1.05);
+    transition: all 0.05s ease-in-out;
+    background-color: #ddd;
+}
+.settings {
+    right:0%;
+}
+
+/******************** signin form styling ********************/
+.box{
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 25px 0;
+    transform: translate(-50%, -50%);
+    width: 100%;
+	max-width: 400px;
+    height: auto;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 2px;
+    display: grid;
+    text-align: center;
+				
+}
+
+.box h2{
+    margin: 5px;
+    padding: 0;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.box p{
+    font-size: 16px;
+    text-align: center;
+    width:100%;
+}
+
+.box .inputBox{
+    position: relative;
+    width: 100%;
+}
+
+.box .inputBox input{
+    width: 80%;
+    padding: 8px 12px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 1px solid grey;
+    border-radius: 2px;
+    outline:none;
+}
+
+.box .inputBox input:focus {
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.07s ease-in-out;
+}
+
+.box button{
+    margin: 10px auto;
+    border: 1px solid grey;
+    outline: none;
+    color: black;
+    background-color: slategrey;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 16px;
+    position: relative;
+    width: 80%;
+}
+.box button:hover{
+    background-color: lightslategray;
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    transition: all 0.07s ease-in-out;
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+}
+.alert i {
+    margin-right: 15px;
+    font-size: 16px;
+}
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 24px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+/* The success message box */
+.success {
+    padding: 20px;
+    background-color: #70cc33; /* Green */
+    color: white;
+}
+.success i {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.logoBox{
+    display: block;
+    margin: 15px auto 25px auto;
+    height: 30%;
+    width: 100%;
+} 
+
+/******************** media view interface styling ********************/
+
+.mediaborder{
+    max-width: 80%;
+    height: auto;
+    border: 5px groove grey;
+    border-radius: 12px;
+}
+
+/*********************** manage playlist styling ************************/
+.metabox{
+    margin: 10px auto;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 20px 30px;
+    display: block;
+    width: 60%;
+    text-align: left;
+}
+#optionsMetabox {
+    background-color: #ccc;
+    width: fit-content;
+}
+.metabox h3 {
+    margin: 0 0 6px 0;
+}
+.metabox h4 {
+    margin: 0;
+}
+.metabox p {
+    margin: 0;
+}
+.playlistOpts {
+    display: flex;
+    justify-content: space-between;
+}
+.playlistForm input {
+    min-width: 50%;
+    font-size: 16px;
+    padding: 8px 12px;
+    position: relative;
+    border-radius: 2px 0px 0px 2px;
+    border: none;
+    outline: none;
+}
+.playlistForm #delete {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #f44336;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 16px;
+    position: relative;
+}
+.playlistForm #rename {
+    position: absolute;
+    right: 4px;
+    border: none;
+    border-radius: 0px 2px 2px 0px;
+    outline: none;
+    color: white;
+    background-color: slategrey;
+    padding: 8px 12px;
+    cursor: pointer;
+    position: relative;
+}
+.playlistForm #makenew {
+    position: absolute;
+    right: 4px;
+    border: none;
+    border-radius: 0px 2px 2px 0px;
+    outline: none;
+    color: white;
+    background-color: #70cc33;
+    padding: 8px 12px;
+    cursor: pointer;
+    position: relative;
+}
+.playlistForm button:hover {
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.07s ease-in-out;
+}
+
+/* media container */
+.mediaContainer {
+    display: block;
+    width: 80%;
+    min-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.mediaOpts {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 30px;
+    text-align: left;
+    border: 2px dashed;
+}
+.mediaOpts button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    margin: 0 5px;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+}
+.mediaOpts button:hover {
+    transform: scale(1.10);
+    transition: all 0.05s ease-in-out;
+}
+.OptAndButton {
+    padding: 10px 0;
+}
+.OptAndButton select {
+    width: fit-content;
+    background-color: #dedede;
+    border-radius: 2px;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 4px 8px;
+}
+
+.mediaborder{
+    max-width: 80%;
+    height: auto;
+    border: 5px groove grey;
+    border-radius: 12px;
+}
+
+/* Comment section */
+.comment{
+    background-color: #d8ecf3;
+    width: 500px;
+    height: auto;
+    border: 2px groove black;
+    border-radius: 0 16px;
+    padding: 20px;
+    text-align: left;
+}
+
+.commentsection{
+    margin: 10px auto;
+    border: none;
+    overflow-x: auto;
+}
+#commentArea {
+    width: 80%;
+    outline: none;
+}
+#replyArea {
+    width: 80%;
+    outline: none;
+}
