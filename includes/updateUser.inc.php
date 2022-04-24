@@ -12,13 +12,14 @@ if (isset($_POST["submit"])) {
     //arbitrary session start use
     session_start();
 
+    // call functions to perform error handling
+    require_once 'dbh.inc.php';
+    require_once 'functions.inc.php';
+
     // get current user id
     $cur_id = $_SESSION["userId"]; // the only unique identifier that doesn't change; used to determine which user to update
     $cur_uid = sqlSelect($link, 'userUid', 'Users', 'userId', $cur_id); // current unchanged username
 
-    // call functions to perform error handling
-    require_once 'dbh.inc.php';
-    require_once 'functions.inc.php';
 
     if (invalidUid($uid) !== false) {
         header("location: ../updateUser.php?error=invalidusername");
